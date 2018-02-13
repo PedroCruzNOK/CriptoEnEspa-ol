@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_alert: MyString
+  message: 
+  created_at: 2018-02-13
+
+two:
+  type_alert: MyString
+  message: 
+  created_at: 2018-02-13

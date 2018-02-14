@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :setting_name %>
-    <%= form.text_field :setting_name, id: :application_setting_setting_name %>
+  <div class="form-group">
+    <%= form.label :setting_name, 'Nombre de configuración' %>
+    <%= form.text_field :setting_name, id: :application_setting_setting_name, disabled: true, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :value %>
-    <%= form.text_field :value, id: :application_setting_value %>
+  <div class="form-group">
+    <%= form.label :value, 'Valor' %>
+    <%= form.text_field :value, id: :application_setting_value, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>

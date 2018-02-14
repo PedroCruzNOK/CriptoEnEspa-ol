@@ -1,13 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Application Settings</h1>
+<h1>Configuraciones de applicación</h1>
 
 <table>
   <thead>
     <tr>
       <th>Setting name</th>
       <th>Value</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -16,9 +14,7 @@
       <tr>
         <td><%= application_setting.setting_name %></td>
         <td><%= application_setting.value %></td>
-        <td><%= link_to 'Show', application_setting %></td>
-        <td><%= link_to 'Edit', edit_application_setting_path(application_setting) %></td>
-        <td><%= link_to 'Destroy', application_setting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Editar', edit_application_setting_path(application_setting) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +22,3 @@
 
 <br>
 
-<%= link_to 'New Application Setting', new_application_setting_path %>

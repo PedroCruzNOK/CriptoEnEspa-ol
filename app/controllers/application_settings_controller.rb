@@ -42,7 +42,7 @@ class ApplicationSettingsController < ApplicationController
   def update
     respond_to do |format|
       if @application_setting.update(application_setting_params)
-        format.html { redirect_to @application_setting, notice: 'Application setting was successfully updated.' }
+        format.html { redirect_to application_settings_path, notice: 'Configuracion de la applicacion se actualizo con exito.' }
         format.json { render :show, status: :ok, location: @application_setting }
       else
         format.html { render :edit }

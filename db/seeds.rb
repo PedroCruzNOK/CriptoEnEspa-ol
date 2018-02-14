@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+ApplicationSetting.where(setting_name: 'FACEBOOK_APP_ID').first_or_create do |setting|
+  setting.setting_name = 'FACEBOOK_APP_ID'
+  setting.value = ''
+end
+
+ApplicationSetting.where(setting_name: 'GOOGLE_ANALYTICS_ID').first_or_create do |setting|
+  setting.setting_name = 'GOOGLE_ANALYTICS_ID'
+  setting.value = ''
+end
+

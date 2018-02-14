@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :application_settings
   resources :alerts
   resources :courses
   resources :abouts

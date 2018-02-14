@@ -1,0 +1,24 @@
+<h1>Configuraciones de applicación</h1>
+
+<table class="table table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th>Setting name</th>
+      <th>Value</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @application_settings.each do |application_setting| %>
+      <tr>
+        <td><%= application_setting.setting_name %></td>
+        <td><%= application_setting.value %></td>
+        <td><%= link_to 'Editar', edit_application_setting_path(application_setting) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

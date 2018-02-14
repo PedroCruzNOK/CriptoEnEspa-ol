@@ -1,0 +1,27 @@
+<%= form_with(model: application_setting, local: true) do |form| %>
+  <% if application_setting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(application_setting.errors.count, "error") %> prohibited this application_setting from being saved:</h2>
+
+      <ul>
+      <% application_setting.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :setting_name, 'Nombre de configuración' %>
+    <%= form.text_field :setting_name, id: :application_setting_setting_name, disabled: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :value, 'Valor' %>
+    <%= form.text_field :value, id: :application_setting_value, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

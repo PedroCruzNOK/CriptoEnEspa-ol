@@ -9,6 +9,16 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <div class="logued-user">
+        <img src="<%= current_user.image %>" alt="user-avatar" style="height: 50px;">
+        <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %>
+      </div>
+    <% end %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>

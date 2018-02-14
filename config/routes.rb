@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :application_settings
   resources :alerts
   resources :courses

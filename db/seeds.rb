@@ -16,3 +16,8 @@ ApplicationSetting.where(setting_name: 'GOOGLE_ANALYTICS_ID').first_or_create do
   setting.value = ''
 end
 
+User.where(email: 'admin@admin').first_or_create do |user|
+  user.email = 'admin@admin'
+  password = 'admin'
+  password_confirmation = 'admin'
+end

@@ -18,6 +18,6 @@ end
 
 User.where(email: 'admin@admin').first_or_create do |user|
   user.email = 'admin@admin'
-  password = 'admin'
-  password_confirmation = 'admin'
+  user.password = '123456'
+  user.password_confirmation = '123456'
 end

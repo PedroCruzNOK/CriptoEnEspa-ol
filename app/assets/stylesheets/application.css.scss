@@ -2,6 +2,7 @@
 body{
   background: rgb(168, 37, 200);
 }
+<<<<<<< HEAD
 .imginicial{
   position:absolute;
   top:0px;
@@ -49,4 +50,64 @@ div#menu ul li:hover{
   padding-left: 20px;
   width: 350px;
 
+=======
+h2{
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+.titulo-planes{
+  margin: 2em;
+}
+p{
+  font-size: 13px;
+  color:white;
+}
+.contenedor-principal-planes{
+  margin: 1em 3em;
+}
+.contenedor-planes{
+  border: solid 4px #c08c1d;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-top-left-radius: 55px;
+  border-top-right-radius: 55px;
+}
+.division-planes{
+  border-top: solid 4px #c08c1d;
+  padding: 1em;
+}
+.imagen-planes{
+  margin: 1em;
+}
+.boton-planes{
+  width: 100%;
+  border: solid 4px #c08c1d;
+  border-radius: 17px;
+  background: none;
+  color: white;
+  font-size: 13px;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.contacto{
+  margin-top: 3em;
+  margin-left: 2em;
+}
+.contenedor-contacto{
+  background: white;
+  border-radius: 20px;
+  padding: 2em;
+
+
+}
+.titulo-contacto{
+  color: black;
+}
+.contenedor-texto-contacto{
+  margin-top: 10%;
+}
+.texto-contacto{
+  text-align: justify;
+>>>>>>> 4a6ac6f8e7a2c3a3016717c2136e353c39373438
 }

@@ -1,6 +1,7 @@
 @import "bootstrap";
 body{
-  background: rgb(168, 37, 200);
+  background: black;
+  font-family: Helvetica;
 }
 h2{
   font-size: 15px;
@@ -46,7 +47,7 @@ p{
   margin-left: 2em;
 }
 .contenedor-contacto{
-  background: white;
+  background-image: image-url("CONTACTO.png");
   border-radius: 20px;
   padding: 2em;
 
@@ -60,4 +61,8 @@ p{
 }
 .texto-contacto{
   text-align: justify;
+}
+.redes-sociales{
+  margin-top: 5em;
+  margin-bottom: 3em;
 }

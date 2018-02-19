@@ -3,6 +3,55 @@ body{
   background: black;
   font-family: Helvetica;
 }
+<<<<<<< HEAD
+.imginicial{
+  position:absolute;
+  top:0px;
+  left:5px;
+  border:none;
+}
+.sobre {
+ position:absolute;
+ top:0px;
+ left:10px;
+ border:none;
+}
+.aregistros{
+  font-size: 15px;
+
+}
+.imatop{
+  margin-top:3px;
+}
+#menu{
+  width: 300px;
+  margin-top: 150px;
+
+
+}
+div#menu ul{
+  list-style: none;
+}
+div#menu ul li{
+  padding-left: 5px;
+  padding: 5px;
+  margin-top: 20px;
+  font-size: 20px;
+  text-decoration-color: black;
+  vertical-align: middle;
+  background-color: white;
+  opacity: 0.5;
+  filter:  alpha(opacity=50);
+  border-radius: 20px 20px 20px 20px;
+  -webkit-transition:padding-Left 0.6s;
+  -webkit-transition:width 0.006s;
+
+}
+div#menu ul li:hover{
+  padding-left: 20px;
+  width: 350px;
+
+=======
 h2{
   font-size: 15px;
   font-weight: bold;
@@ -61,6 +110,7 @@ p{
 }
 .texto-contacto{
   text-align: justify;
+>>>>>>> 4a6ac6f8e7a2c3a3016717c2136e353c39373438
 }
 .redes-sociales{
   margin-top: 5em;

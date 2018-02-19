@@ -1,0 +1,52 @@
+@import "bootstrap";
+body{
+  background: rgb(168, 37, 200);
+}
+.imginicial{
+  position:absolute;
+  top:0px;
+  left:5px;
+  border:none;
+}
+.sobre {
+ position:absolute;
+ top:0px;
+ left:10px;
+ border:none;
+}
+.aregistros{
+  font-size: 15px;
+
+}
+.imatop{
+  margin-top:3px;
+}
+#menu{
+  width: 300px;
+  margin-top: 150px;
+
+
+}
+div#menu ul{
+  list-style: none;
+}
+div#menu ul li{
+  padding-left: 5px;
+  padding: 5px;
+  margin-top: 20px;
+  font-size: 20px;
+  text-decoration-color: black;
+  vertical-align: middle;
+  background-color: white;
+  opacity: 0.5;
+  filter:  alpha(opacity=50);
+  border-radius: 20px 20px 20px 20px;
+  -webkit-transition:padding-Left 0.6s;
+  -webkit-transition:width 0.006s;
+
+}
+div#menu ul li:hover{
+  padding-left: 20px;
+  width: 350px;
+
+}

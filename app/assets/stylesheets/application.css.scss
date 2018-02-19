@@ -1,6 +1,10 @@
 @import "bootstrap";
 body{
   background: black;
+<<<<<<< HEAD
+=======
+  font-family: Helvetica;
+>>>>>>> 146b14fe94cc7ddbc2ba58a4d352cdea2df3698a
 }
 .imginicial{
   position:absolute;
@@ -107,7 +111,7 @@ p{
   margin-left: 2em;
 }
 .contenedor-contacto{
-  background: white;
+  background-image: image-url("CONTACTO.png");
   border-radius: 20px;
   padding: 2em;
 
@@ -122,4 +126,8 @@ p{
 .texto-contacto{
   text-align: justify;
 
+}
+.redes-sociales{
+  margin-top: 5em;
+  margin-bottom: 3em;
 }

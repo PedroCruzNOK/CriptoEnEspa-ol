@@ -5,7 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 # Bundle edge Rails instead: gem de bootstrap para estilizar la plataforma
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jquery-rails'
+
+gem 'bootstrap', '~> 4.0.0'
 gem 'autoprefixer-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

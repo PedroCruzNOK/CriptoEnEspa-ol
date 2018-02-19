@@ -2,3 +2,42 @@
 body{
   background: rgb(168, 37, 200);
 }
+h2{
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+.titulo-planes{
+  margin: 2em;
+}
+p{
+  font-size: 13px;
+  color:white;
+}
+.contenedor-principal-planes{
+  margin: 1em 3em;
+}
+.contenedor-planes{
+  border: solid 4px #c08c1d;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-top-left-radius: 55px;
+  border-top-right-radius: 55px;
+}
+.division-planes{
+  border-top: solid 4px #c08c1d;
+  padding: 1em;
+}
+.imagen-planes{
+  margin: 1em;
+}
+.boton-planes{
+  width: 100%;
+  border: solid 4px #c08c1d;
+  border-radius: 17px;
+  background: none;
+  color: white;
+  font-size: 13px;
+  margin-bottom: 1em;
+  cursor: pointer;
+}

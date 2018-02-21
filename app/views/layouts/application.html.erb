@@ -16,9 +16,12 @@
         <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %>
       </div>
     <% end %>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    
+    <% if flash[:notice] %>
+      <p class="notice"><%= notice %></p>
+    <% elsif flash[:alert] %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
   </body>

@@ -5,6 +5,27 @@ body{
   width: 100vw;
 }
 
+
+h1, h2, h3, h4, h5, h6{
+  &.white-text{
+    color: white;
+  }
+
+  &.gold-title{
+    color: #DB9E01;
+    background: rgba(0, 0, 0, .7);
+    text-shadow: 1px 1px 0 #D1D1D1;
+    padding: .25em .5em .1em .5em;
+    border-radius: .15em;
+  }
+}
+
+.card{
+  p{
+    color: #353535;
+  }
+}
+
 .imginicial{
   position:absolute;
   top:0px;
@@ -17,6 +38,29 @@ body{
  left:10px;
  border:none;
 }
+
+.header{
+  // background-image: image-url('background_01.jpg');
+  // background-size: cover;
+  // background-position: bottom center;
+  // padding-bottom: 25em;
+
+  position: relative;
+
+  .bg-image{
+    position: absolute;
+    background-image: image-url('background_01.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 50%;
+    z-index: -999;
+  }
+}
+
 .imatop{
   margin-top:3px;
 }
@@ -147,12 +191,7 @@ body{
 h2{
   font-size: 15px;
   font-weight: bold;
-<<<<<<< HEAD
   color: white;
-
-=======
-  background: white;
->>>>>>> 2a88c1442900124079aac0ef22aa09f5dd23bfaa
 }
 .titulo-planes{
   margin: 2em;

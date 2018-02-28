@@ -1,5 +1,5 @@
 desc "This task is called by the Heroku scheduler add-on"
-task :update_feed => :environment do
+task :update_coindesk => :environment do
   require 'open-uri'
   require 'nokogiri'
 
@@ -31,7 +31,7 @@ end
 
 
 desc "This task is called by the Heroku scheduler add-on"
-task :update_feed => :environment do
+task :update_criptotendencia => :environment do
   doc = Nokogiri::HTML(open("https://criptotendencia.com/category/noticias/"))
 
 # Getting for post in current page

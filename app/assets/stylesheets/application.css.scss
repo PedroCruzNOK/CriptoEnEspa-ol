@@ -21,9 +21,18 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .card{
+  margin-bottom: 1em;
+
   p{
     color: #353535;
   }
+
+  img.card-img-top{
+    height: 175px;
+    object-fit: cover;
+    width: auto;
+  }
+
 }
 
 .imginicial{

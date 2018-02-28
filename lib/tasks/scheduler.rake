@@ -34,7 +34,7 @@ desc "This task is called by the Heroku scheduler add-on"
 task :update_criptotendencia => :environment do
   require 'open-uri'
   require 'nokogiri'
-  
+
   doc = Nokogiri::HTML(open("https://criptotendencia.com/category/noticias/"))
 
 # Getting for post in current page
@@ -45,7 +45,7 @@ task :update_criptotendencia => :environment do
     image_url = post.at_css("img.wp-post-image") ? post.css("img.wp-post-image").attr("src") : nil
     title = post.at_css(".entry-title a") ? post.css(".entry-title a").text : nil
     url = post.at_css(".entry-title a") ? post.css(".entry-title a").attr("href") : nil
-    content = nil,
+    content = nil
     source = 'criptotendencia'
     notice = BlogArticle.new(
       title: title,

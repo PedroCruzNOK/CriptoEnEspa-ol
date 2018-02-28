@@ -32,6 +32,9 @@ end
 
 desc "This task is called by the Heroku scheduler add-on"
 task :update_criptotendencia => :environment do
+  require 'open-uri'
+  require 'nokogiri'
+  
   doc = Nokogiri::HTML(open("https://criptotendencia.com/category/noticias/"))
 
 # Getting for post in current page

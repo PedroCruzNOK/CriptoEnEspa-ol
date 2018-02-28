@@ -2,7 +2,7 @@
 
 <div class="container">
   
-  <h1 class="gold-title">Las ultimas Cripto-Noticias</h1>
+  <h1 class="gold-title">Ultimas Noticias sobre Criptomonedas</h1>
       
       <div class="row">
           
@@ -17,7 +17,7 @@
                 <p class="card-text"><%= truncate blog_article.content, length: 100 %></p>
                 <a href="<%= blog_article.url %>" class="btn btn-primary float-right">Ver</a>
                 <%= blog_article.source %>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <p class="card-text"><small class="text-muted"><%= time_ago_in_words(blog_article.created_at) %></small></p>
               </div>
             </div>
           </div>
@@ -28,8 +28,6 @@
             <td><%# link_to 'Destroy', blog_article, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
         <% end %>
       </div>
-
-  <%= link_to 'New Blog Article', new_blog_article_path %>
   
 </div>
 

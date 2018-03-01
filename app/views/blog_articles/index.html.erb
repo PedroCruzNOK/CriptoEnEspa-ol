@@ -1,0 +1,35 @@
+<%= render 'partials/header' %>
+
+<div class="container">
+  
+  <h1 class="gold-title">Ultimas Noticias sobre Criptomonedas
+    <%= link_to 'Crear', new_blog_article_path, class: 'btn btn-primary float-right', style: 'color: white; text-shadow: none;' if user_signed_in? %>
+  </h1>
+      
+      <div class="row">
+          
+        <% @blog_articles.each do |blog_article| %>
+          
+          <div class="col-lg-4">
+            
+            <div class="card">
+              <img class="card-img-top" src="<%= blog_article.image_url %>" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title"><%= blog_article.title %></h5>
+                <p class="card-text"><%= truncate blog_article.content, length: 100 %></p>
+                <a href="<%= blog_article.url %>" class="btn btn-primary float-right" target="_blank">Ver</a>
+                <%= blog_article.source %>
+                <p class="card-text"><small class="text-muted"><%= time_ago_in_words(blog_article.created_at) %></small></p>
+              </div>
+            </div>
+          </div>
+
+  <!--           <td></td>
+            <td><%# link_to 'Show', blog_article %></td>
+            <td><%# link_to 'Edit', edit_blog_article_path(blog_article) %></td>
+            <td><%# link_to 'Destroy', blog_article, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        <% end %>
+      </div>
+  
+</div>
+

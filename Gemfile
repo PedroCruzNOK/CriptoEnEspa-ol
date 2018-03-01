@@ -7,7 +7,7 @@ end
 # Bundle edge Rails instead: gem de bootstrap para estilizar la plataforma
 gem 'jquery-rails'
 
-#gem 'pg', '~> 1.0.0'
+gem 'pg', '~> 1.0.0'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'autoprefixer-rails'
@@ -53,11 +53,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-end
-
-
-group :production do 
-  gem 'pg', '~> 1.0.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

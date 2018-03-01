@@ -1,3 +1,11 @@
 // Place all the styles related to the BlogArticles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.white-container.blog-article-form{
+  border-radius: .4em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background: rgba(255, 255, 255, 0.9) !important;
+}

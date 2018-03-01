@@ -4,7 +4,7 @@ class BlogArticlesController < ApplicationController
   # GET /blog_articles
   # GET /blog_articles.json
   def index
-    @blog_articles = BlogArticle.all
+    @blog_articles = BlogArticle.all.order(created_at: :desc)
   end
 
   # GET /blog_articles/1

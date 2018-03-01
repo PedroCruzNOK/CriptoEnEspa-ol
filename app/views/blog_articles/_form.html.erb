@@ -11,32 +11,47 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :blog_article_title %>
-  </div>
+  <div class="row">
+      
+    <div class="col-sm-12">
+      <div class="form-group">
+        <%= form.label :title, 'Titulo' %>
+        <%= form.text_field :title, id: :blog_article_title, class: 'form-control' %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content, id: :blog_article_content %>
-  </div>
+    <div class="col-sm-12">
+      <div class="form-group">
+        <%= form.label :content, 'Contenido o descripción' %>
+        <%= form.text_area :content, id: :blog_article_content, class: 'form-control' %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :url %>
-    <%= form.text_field :url, id: :blog_article_url %>
-  </div>
+    <div class="col-sm-12">
+      <div class="form-group">
+        <%= form.label :url, 'URL' %>
+        <%= form.text_field :url, id: :blog_article_url, class: 'form-control' %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :source %>
-    <%= form.text_field :source, id: :blog_article_source %>
-  </div>
+    <div class="col-sm-12">
+      <div class="form-group">
+        <%= form.label :source, 'Fuente de la noticia' %>
+        <%= form.text_field :source, id: :blog_article_source, class: 'form-control' %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :blog_article_image_url %>
-  </div>
+    <div class="col-sm-12">
+      <div class="form-group">
+        <%= form.label :image_url, 'URL de la Imagen' %>
+        <%= form.text_field :image_url, id: :blog_article_image_url, class: 'form-control' %>
+      </div>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <div class="col-sm-12 text-right">
+      <div class="actions">
+        <%= form.submit class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 <% end %>

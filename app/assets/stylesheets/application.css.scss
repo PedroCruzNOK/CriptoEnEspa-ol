@@ -22,7 +22,19 @@ body{
 }
 
 .introduction{
-  background-image: image-url('background_01.jpg');
+  background-image: image-url('background1.png');
+  background-size: cover;
+  background-position: bottom center;
+  padding-bottom: 25em;
+}
+.fondo2{
+  background-image: image-url('background2.png');
+  background-size: cover;
+  background-position: bottom center;
+  padding-bottom: 25em;
+}
+.fondo3{
+  background-image: image-url('background3.png');
   background-size: cover;
   background-position: bottom center;
   padding-bottom: 25em;
@@ -147,12 +159,8 @@ body{
 h2{
   font-size: 15px;
   font-weight: bold;
-<<<<<<< HEAD
   color: white;
 
-=======
-  background: white;
->>>>>>> 2a88c1442900124079aac0ef22aa09f5dd23bfaa
 }
 .titulo-planes{
   margin: 2em;

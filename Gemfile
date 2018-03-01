@@ -7,7 +7,7 @@ end
 # Bundle edge Rails instead: gem de bootstrap para estilizar la plataforma
 gem 'jquery-rails'
 
-gem 'pg'
+#gem 'pg', '~> 1.0.0'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'autoprefixer-rails'

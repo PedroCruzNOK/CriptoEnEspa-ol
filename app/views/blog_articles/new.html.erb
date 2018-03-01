@@ -1,0 +1,14 @@
+<%= render 'partials/header' %>
+
+<div class="container white-container blog-article-form">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>Nuevo Articulo para el blog</h1>
+
+      <%= render 'form', blog_article: @blog_article %>
+
+      <%= link_to 'Regresar', blog_articles_path %>
+    </div>
+  </div>
+</div>

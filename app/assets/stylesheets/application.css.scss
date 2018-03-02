@@ -29,6 +29,10 @@ body{
 
 
 h1, h2, h3, h4, h5, h6{
+  &.black-text{
+    color: #393939;
+  }
+
   &.white-text{
     color: white;
   }
@@ -150,6 +154,11 @@ h1, h2, h3, h4, h5, h6{
   .image-item{
     height: 140px;
   }
+}
+
+.link{
+  color: white !important;
+  text-style: none;
 }
 
 .login{
@@ -274,6 +283,13 @@ p{
 .boton-planes:hover{
   border: solid 4px white;
 }
+
+.container-white{
+  background: rgba(255, 255, 255, .96);
+  border-radius: .2em;
+  padding: 1em 1.5em 1em 1.5em;
+}
+
 .contacto{
   margin-top: 3em;
   margin-left: 2em;

@@ -6,7 +6,9 @@
 
     <div class="col-lg-6">
       <div class="logo-container">
-        <%= image_tag "logo.png", class: 'logo' %>
+        <%= link_to root_path do %>
+          <%= image_tag "logo.png", class: 'logo' %>
+        <% end %>
       </div>
     </div>
     
@@ -18,14 +20,14 @@
             <li>
               <a class="aregistros" style="color:white">
                 <img  src="<%= image_url("11.png")%>" alt="">
-                INICIAR
+                <%= link_to 'INICIAR', new_user_session_path, class: 'link' %>
               </a>
             </li>
 
             <li>
               <a class="aregistros" style="color:white" >
                 <img  src="<%= image_url("12.png")%>" alt="">
-                REGISTRARSE
+                <%= link_to 'REGISTRARSE', new_user_registration_path, class: 'link' %>
               </a>
             </li>
           </ul>

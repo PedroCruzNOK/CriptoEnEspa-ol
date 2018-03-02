@@ -55,9 +55,15 @@
             <%= link_to 'BLOG', blog_articles_path %>
           </li>
           <li>
-            <img src="<%=image_url("3.png")%>" alt="" style="margin-left:10px;">QUIENES SOMOS</li>
+            <img src="<%=image_url("3.png")%>" alt="" style="margin-left:10px;">
+            <%= link_to 'ACERCA DE', abouts_path %>
+
+          </li>
           <li>
-            <img src="<%=image_url("4.png")%>" alt="" style="margin-left:10px;">ASISTENCIA</li>
+            <img src="<%=image_url("4.png")%>" alt="" style="margin-left:10px;">
+            <%= link_to 'ASISTENCIA', assistances_path %>
+
+          </li>
         </ul>
       </nav>
     </div>

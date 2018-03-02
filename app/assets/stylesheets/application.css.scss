@@ -14,7 +14,7 @@
  * Small screens are defined as having a max-width of 600px
  * Medium screens are defined as having a max-width of 992px
  * Large screen are defined as having a min-width of 993px
- * Extra Large screen are defined as having a min-width of 1200px 
+ * Extra Large screen are defined as having a min-width of 1200px
  *
  *= require_tree .
  *= require_self
@@ -45,7 +45,6 @@ h1, h2, h3, h4, h5, h6{
     border-radius: .15em;
   }
 }
-
 .card{
   margin-bottom: 1em;
 
@@ -232,6 +231,7 @@ h1, h2, h3, h4, h5, h6{
 
     a{
       color: #292929;
+      background: none;
     }
 
     img{
@@ -315,5 +315,29 @@ p{
   margin-bottom: 0em;
 }
 .iconSocial:hover{
+
+}
+.acordeon input{
+  display: none;
+}
+.acordeon__titulo{
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  background: transparent;
+}
+.acordeon__titulo:hover{
+
+}
+.acordeon__contenido{
+  height: 0;
+  overflow: hidden;
+  margin:0;
+  transition: all 0.5s;
+}
+
+.acordeon input:checked ~ .acordeon__contenido{
+  height: auto;
+  margin: 15px 0;
 
 }

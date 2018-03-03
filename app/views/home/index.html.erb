@@ -18,19 +18,28 @@
       <div class="login" align="right">
         <nav class="login-menu">
           <ul>
-            <li>
-              <a class="aregistros" style="color:white">
-                <img  src="<%= image_url("11.png")%>" alt="">
-                <%= link_to 'INICIAR', new_user_session_path, class: 'link' %>
-              </a>
-            </li>
+            <% unless user_signed_in? %>
+              <li>
+                <a class="aregistros" style="color:white">
+                  <img  src="<%= image_url("11.png")%>" alt="">
+                  <%= link_to 'INICIAR', new_user_session_path, class: 'link' %>
+                </a>
+              </li>
 
-            <li>
-              <a class="aregistros" style="color:white" >
-                <img  src="<%= image_url("12.png")%>" alt="">
-                <%= link_to 'REGISTRARSE', new_user_registration_path, class: 'link' %>
-              </a>
-            </li>
+              <li>
+                <a class="aregistros" style="color:white" >
+                  <img  src="<%= image_url("12.png")%>" alt="">
+                  <%= link_to 'REGISTRARSE', new_user_registration_path, class: 'link' %>
+                </a>
+              </li>
+            <% else %>
+              <li>
+                <a class="aregistros" style="color:white" >
+                  <img  src="<%= image_url("12.png")%>" alt="" style="background: linear-gradient(brown, red);">
+                  <%= link_to 'SALIR', destroy_user_session_path, method: :delete, class: 'link' %>
+                </a>
+              </li>
+            <% end %>
           </ul>
         </nav>
 

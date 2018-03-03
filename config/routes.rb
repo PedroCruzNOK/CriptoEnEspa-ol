@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
   resources :blog_articles
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' } do 
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', confirmations: 'confirmations' } do 
       delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
+
   resources :application_settings
   resources :alerts
   resources :courses
   resources :abouts
   resources :assistances
   resources :articles
-  resources:home
+
+  get 'home/index', to: 'home#index'
+  get 'home/my_home', to: 'home#my_home'
 
   root 'home#index'
 

@@ -2,37 +2,49 @@
 
   <div class="bg-image"></div>
 
-  <div class="row topbar">
-
-    <div class="col-lg-6">
-      <div class="logo-container">
-        <%= link_to root_path do %>
-          <%= image_tag "logo.png", class: 'logo' %>
-        <% end %>
-      </div>
-    </div>
+  <div class="container-fluid">
     
-    <div class="col-lg-6">
+    <div class="row topbar">
+
+      <div class="col-lg-6">
+        <div class="logo-container">
+          <%= link_to root_path do %>
+            <%= image_tag "logo.png", class: 'logo' %>
+          <% end %>
+        </div>
+      </div>
       
-      <div class="login" align="right">
-        <nav class="login-menu">
-          <ul>
-            <li>
-              <a class="aregistros" style="color:white">
-                <img  src="<%= image_url("11.png")%>" alt="">
-                <%= link_to 'INICIAR', new_user_session_path, class: 'link' %>
-              </a>
-            </li>
+      <div class="col-lg-6">
+        
+        <div class="login" align="right">
+          <nav class="login-menu">
+            <ul>
+              <% unless user_signed_in? %>
+                <li>
+                  <a class="aregistros" style="color:white">
+                    <img  src="<%= image_url("11.png")%>" alt="">
+                    <%= link_to 'INICIAR', new_user_session_path, class: 'link' %>
+                  </a>
+                </li>
 
-            <li>
-              <a class="aregistros" style="color:white" >
-                <img  src="<%= image_url("12.png")%>" alt="">
-                <%= link_to 'REGISTRARSE', new_user_registration_path, class: 'link' %>
-              </a>
-            </li>
-          </ul>
-        </nav>
+                <li>
+                  <a class="aregistros" style="color:white" >
+                    <img  src="<%= image_url("12.png")%>" alt="">
+                    <%= link_to 'REGISTRARSE', new_user_registration_path, class: 'link' %>
+                  </a>
+                </li>
+              <% else %>
+                <li>
+                  <a class="aregistros" style="color:white;" >
+                    <img src="<%= current_user.image || asset_url('default_profile.png') %>" alt="user-avatar" style="height: 50px; width: 50px; border-radius: 2em;">
+                    <%= link_to 'SALIR', destroy_user_session_path, method: :delete, class: 'link' %>
+                  </a>
+                </li>
+              <% end %>
+            </ul>
+          </nav>
 
+        </div>
       </div>
     </div>
   </div>

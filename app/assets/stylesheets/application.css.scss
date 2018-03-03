@@ -24,7 +24,7 @@
 body{
   background: black;
   font-family: Helvetica;
-  width: 100vw;
+  max-width: 100vw;
 }
 
 
@@ -45,6 +45,32 @@ h1, h2, h3, h4, h5, h6{
     border-radius: .15em;
   }
 }
+
+.acordeon input{
+  display: none;
+}
+.acordeon__titulo{
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  background: transparent;
+}
+.acordeon__titulo:hover{
+
+}
+.acordeon__contenido{
+  height: 0;
+  overflow: hidden;
+  margin:0;
+  transition: all 0.5s;
+}
+
+.acordeon input:checked ~ .acordeon__contenido{
+  height: auto;
+  margin: 15px 0;
+
+}
+
 .card{
   margin-bottom: 1em;
 
@@ -105,6 +131,22 @@ h1, h2, h3, h4, h5, h6{
   background-position: bottom center;
   padding-bottom: 25em;
 }
+
+.fb-button{
+  margin: 1em 0 1em 0;
+  border-radius: .1em;
+  text-align: center;
+  font-size: 1.1em;
+  color: white;
+  background-color: #3b5998;
+  padding: .7em 1em .7em 1em;
+  display: block;
+
+  &:hover{
+    color: white;
+  }
+}
+
 .fondo2{
   background-image: image-url('background2.jpg');
   background-size: cover;
@@ -298,14 +340,13 @@ p{
   background: white;
   border-radius: 20px;
   padding: 2em;
-
-
-}
-.titulo-contacto{
-  color: black;
 }
 .contenedor-texto-contacto{
   margin-top: 10%;
+}
+
+.titulo-contacto{
+  color: black;
 }
 .texto-contacto{
   text-align: justify;
@@ -315,29 +356,5 @@ p{
   margin-bottom: 0em;
 }
 .iconSocial:hover{
-
-}
-.acordeon input{
-  display: none;
-}
-.acordeon__titulo{
-  padding: 15px;
-  font-size: 20px;
-  cursor: pointer;
-  background: transparent;
-}
-.acordeon__titulo:hover{
-
-}
-.acordeon__contenido{
-  height: 0;
-  overflow: hidden;
-  margin:0;
-  transition: all 0.5s;
-}
-
-.acordeon input:checked ~ .acordeon__contenido{
-  height: auto;
-  margin: 15px 0;
 
 }

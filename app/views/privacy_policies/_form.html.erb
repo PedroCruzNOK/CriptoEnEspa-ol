@@ -1,3 +1,5 @@
+<%= tinymce_assets %>
+
 <%= form_with(model: privacy_policy, local: true) do |form| %>
   <% if privacy_policy.errors.any? %>
     <div id="error_explanation">
@@ -11,17 +13,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content, id: :privacy_policy_content %>
+  <div class="form-group">
+    <%= form.label :content, 'Contenido' %>
+    <%= form.text_area :content, id: :privacy_policy_content, class: 'tinymce', rows: 18 %>
   </div>
 
-  <div class="field">
-    <%= form.label :version %>
+
+  <div class="form-group">
+    <%= form.label :version, 'Version' %>
     <%= form.text_field :version, id: :privacy_policy_version %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="row">
+    <div class="col-sm-12 text-right">
+      
+      <%= form.submit class:'btn btn-primary btn-lg' %>
+    </div>
   </div>
 <% end %>
+
+<%= tinymce %>

@@ -1,5 +1,6 @@
 class PrivacyPoliciesController < ApplicationController
   before_action :set_privacy_policy, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy, :index, :new, :create, :update]
 
   def last
     @privacy_policy = PrivacyPolicy.last  || PrivacyPolicy.new

@@ -7,11 +7,12 @@
       <h1>Politicas de Privacidad de Cripto en Español</h1>
       <hr>
       <section>
-        <%= @privacy_policy.content %>
-        <%= @privacy_policy.version %>
+        <%= @privacy_policy.content.html_safe %>
+        <hr>
+        Version <%= @privacy_policy.version %>
         <p>
           Ultima actualización:
-          <%= @privacy_policy.updated_at %>
+          <%= @privacy_policy.updated_at.strftime('%d-%M-%Y') %>
         </p>
       </section>
     </div>

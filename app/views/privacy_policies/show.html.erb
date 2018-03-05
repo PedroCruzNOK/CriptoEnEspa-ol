@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
+<%= render 'partials/header' %>
+<div class="container container-white">
+  
+  <%= @privacy_policy.content.html_safe %>
+  <p>
+    <strong>Version:</strong>
+    <%= @privacy_policy.version %>
+  </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @privacy_policy.content %>
-</p>
-
-<p>
-  <strong>Version:</strong>
-  <%= @privacy_policy.version %>
-</p>
-
-<%= link_to 'Edit', edit_privacy_policy_path(@privacy_policy) %> |
-<%= link_to 'Back', privacy_policies_path %>
+  <%= link_to 'Editar', edit_privacy_policy_path(@privacy_policy) %> |
+  <%= link_to 'Regresar', privacy_policies_path %>
+</div>

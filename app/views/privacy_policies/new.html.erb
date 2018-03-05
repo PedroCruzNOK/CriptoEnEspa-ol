@@ -1,5 +1,10 @@
-<h1>New Privacy Policy</h1>
+<%= render 'partials/header' %>
 
-<%= render 'form', privacy_policy: @privacy_policy %>
+<div class="container container-white">
+  
+  <h1>Nueva Politica de Privacidad</h1>
 
-<%= link_to 'Back', privacy_policies_path %>
+  <%= render 'form', privacy_policy: @privacy_policy %>
+
+  <%= link_to 'Back', privacy_policies_path %>
+</div>

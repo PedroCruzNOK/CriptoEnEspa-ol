@@ -12,14 +12,13 @@ class UsersController < ApplicationController
   end
 
   def update
-
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @privacy_policy, notice: 'Privacy policy was successfully updated.' }
+        format.html { redirect_to users_my_account_path, notice: 'La información de tu cuenta se actualizo con éxito.' }
         format.json { render :show, status: :ok, location: @privacy_policy }
       else
         format.html { render :edit }
-        format.json { render json: @privacy_policy.errors, status: :unprocessable_entity }
+        # format.json { render json: @privacy_policy.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -44,6 +43,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :password, :password_confirmation)
+      params.require(:user).permit(:name, :image, :password, :password_confirmation)
     end
 end

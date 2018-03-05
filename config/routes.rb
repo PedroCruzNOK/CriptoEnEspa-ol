@@ -13,9 +13,10 @@ Rails.application.routes.draw do
       delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
-  resource :user, only: [:edit_password] do
+  resource :user, only: [:edit_password, :edit] do
     collection do
       patch 'update_password'
+      patch 'update'
     end
   end
 

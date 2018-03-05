@@ -2,4 +2,30 @@
 <div class="container container-white">
   
   <h1>Configuración de mi cuenta</h1>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12 col-lg-4 offset-lg-4">
+      
+      <%= form_for(@user, :url => { :action => "update" } ) do |f| %>
+        <div class="form-group">
+          <%= f.label :name, 'Nombre' %><br />
+          <%= f.text_field :name, class: 'form-control'  %>
+        </div>
+        <div class="form-group">
+          <%= f.label :image, 'URL de imagen' %><br />
+          <%= f.text_field :image, class: 'form-control' %>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 text-right">
+            
+            <div class="action_container">
+              <%= f.submit 'Actualizar información', class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
 </div>

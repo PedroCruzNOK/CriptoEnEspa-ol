@@ -37,7 +37,34 @@
                 <li>
                   <a class="aregistros" style="color:white;" >
                     <img src="<%= current_user.image || asset_url('default_profile.png') %>" alt="user-avatar" style="height: 50px; width: 50px; border-radius: 2em;">
-                    <%= link_to 'SALIR', destroy_user_session_path, method: :delete, class: 'link' %>
+                    
+                    <div class="btn-group">
+                      <div class="dropdown" hidden>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <%= current_user.email %>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <%= link_to 'Mi Cuenta', users_my_account_path, class: 'dropdown-item' %>
+                          <a class="dropdown-item disabled" href="#">Mi Suscripción</a>
+                          <div class="dropdown-divider"></div>
+                          <!-- <a class="dropdown-item" href="#">Salir</a> -->
+                          <%= link_to 'Salir', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+                        </div>
+                      </div>
+                    </div>
+
+                    
                   </a>
                 </li>
               <% end %>

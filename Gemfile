@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'pg', '~> 1.0.0'
 
 gem 'bootstrap', '~> 4.0.0'
+gem 'popper_js', '~> 1.12.9'
+
 gem 'autoprefixer-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

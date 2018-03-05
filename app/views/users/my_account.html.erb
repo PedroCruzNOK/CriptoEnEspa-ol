@@ -1,0 +1,41 @@
+<%= render 'partials/header' %>
+
+<div class="container container-white">
+  
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>Mi cuenta</h1>
+    </div>
+    <div class="col-sm-4 text-right">
+      <%= link_to 'Editar mi cuenta', users_edit_path, class: 'btn btn-secondary' %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      
+      <div class="show-profile-item">
+        
+        <%= @user.image ? (image_tag @user.image, class: 'show-profile-image') : (image_tag 'default_profile.png', class: 'show-profile-image') %>
+      </div>
+
+      <div class="show-profile-item">
+        <h3>
+          <%= @user.name || 'Sin nombre de usuario' %> 
+        </h3>
+      </div>
+      
+      <div class="show-profile-item">
+        <h4><%= @user.email %></h4>
+      </div>
+
+      <hr>
+
+      <div class="show-profile-item">
+        <%= link_to 'Cambiar mi Contraseña', users_edit_password_path, class: 'btn btn-secondary' %>
+      </div>
+
+    </div>
+  </div>
+
+</div>

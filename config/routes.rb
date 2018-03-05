@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/my_account'
+  get 'users/edit'
+  get 'users/edit_password'
+
   resources :privacy_policies do
     collection do
       get 'last'
@@ -7,6 +11,12 @@ Rails.application.routes.draw do
   resources :blog_articles
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', confirmations: 'confirmations' } do 
       delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  end
+
+  resource :user, only: [:edit_password] do
+    collection do
+      patch 'update_password'
+    end
   end
 
   resources :application_settings

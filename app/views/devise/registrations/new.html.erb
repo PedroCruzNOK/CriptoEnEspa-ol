@@ -36,6 +36,12 @@
       <hr>
 
       <%= render "devise/shared/links" %>
+
+      <div class="alert alert-warning">
+        Registrarte o Ingresar implica la aceptación de nuestras
+        <%= link_to 'politicas de privacidad', last_privacy_policies_path, class: 'alert-link' %>
+        .
+      </div>
     </div>
   </div>
 </div>

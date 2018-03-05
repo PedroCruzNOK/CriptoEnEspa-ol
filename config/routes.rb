@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :privacy_policies do
+    collection do
+      get 'last'
+    end
+  end
   resources :blog_articles
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', confirmations: 'confirmations' } do 
       delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session

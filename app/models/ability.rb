@@ -28,5 +28,24 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
+
+
+    if user.present?
+        can :read, :all
+        can [:my_account, 
+            :edit, 
+            :update, 
+            :edit_password, 
+            :update_password], 
+            User 
+        if user.admin?
+            can :manage, :all
+            can :dashboard, Home
+        end
+    else
+        # Usuarios no registrados (visitas)
+        can :read, BlogArticle
+    end
+
   end
 end

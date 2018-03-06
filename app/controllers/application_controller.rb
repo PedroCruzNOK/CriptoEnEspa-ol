@@ -8,6 +8,14 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit :account_update, keys: update_attrs
   end
 
+  rescue_from CanCan::AccessDenied do |exception|
+    respond_to do |format|
+      format.json { head :forbidden, content_type: 'text/html' }
+      format.html { redirect_to main_app.root_url, alert: exception.message }
+      format.js   { head :forbidden, content_type: 'text/html' }
+    end
+  end
+
   protected
     def after_sign_in_path_for(resource)
       # request.env['omniauth.origin'] || stored_location_for(resource) || root_path

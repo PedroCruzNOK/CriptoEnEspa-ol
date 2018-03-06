@@ -1,0 +1,5 @@
+:schedule:
+  scrap_criptotendencia_worker:
+    every: ['4h', first_in: '30s']   # Runs once per minute
+    class: ScrapCriptotendenciaWorker
+

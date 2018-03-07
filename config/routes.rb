@@ -5,9 +5,18 @@ Rails.application.routes.draw do
     resources :courses
   end
 
+  get 'chat/index'
+
   get 'users/my_account'
   get 'users/edit'
   get 'users/edit_password'
+
+  resources :conversations, only: [:create]do
+    member do
+      post :close
+      resources :messages, only: [:create]
+    end
+  end
 
   resources :privacy_policies do
     collection do
@@ -15,7 +24,8 @@ Rails.application.routes.draw do
     end
   end
   resources :blog_articles
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', confirmations: 'confirmations' } do 
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', confirmations: 'confirmations' } do
+
       delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
@@ -31,6 +41,7 @@ Rails.application.routes.draw do
   resources :abouts
   resources :assistances
   resources :articles
+  resources :chat
 
   get 'home/index', to: 'home#index'
   get 'home/my_home', to: 'home#my_home'

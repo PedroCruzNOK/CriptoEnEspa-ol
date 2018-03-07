@@ -56,7 +56,11 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <%= link_to 'Mi Cuenta', users_my_account_path, class: 'dropdown-item' %>
-                          <a class="dropdown-item disabled" href="#">Mi Suscripción</a>
+                          <% unless current_user.present? and current_user.admin? %>
+                            <a class="dropdown-item disabled" href="#">Mi Suscripción</a>
+                          <% else %>
+                            <a class="dropdown-item" href="#">Administrar</a>
+                          <% end %>
                           <div class="dropdown-divider"></div>
                           <!-- <a class="dropdown-item" href="#">Salir</a> -->
                           <%= link_to 'Salir', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>

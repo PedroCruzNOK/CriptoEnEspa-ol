@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :level %>
-    <%= form.number_field :level, id: :course_level %>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :course_name %>
   </div>
 
   <div class="field">
     <%= form.label :level %>
-    <%= form.text_field :level, id: :course_level %>
+    <%= form.select :level, %w(Facil Intermedio Dificil), id: :course_level %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :course_description %>
+    <%= form.text_area :description, id: :course_description %>
   </div>
 
   <div class="actions">

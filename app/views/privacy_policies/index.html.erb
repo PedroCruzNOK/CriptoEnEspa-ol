@@ -1,0 +1,36 @@
+<%= render 'partials/header' %>
+
+<div class="container container-white">
+  
+  <h1>Privacy Policies</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @privacy_policies.each do |privacy_policy| %>
+        <tr>
+          <td><%= privacy_policy.version %></td>
+          <td><%= link_to 'Ver', privacy_policy %> | </td>
+          <td><%= link_to 'Editar', edit_privacy_policy_path(privacy_policy) %> | </td>
+          <td><%= link_to 'Eliminar', privacy_policy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  
+  <div class="row">
+    <div class="col-sm-12 text-right">
+      
+      <%= link_to 'New Privacy Policy', new_privacy_policy_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
+

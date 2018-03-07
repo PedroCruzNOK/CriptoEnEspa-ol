@@ -9,6 +9,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       session["devise.facebook_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
+      set_flash_message(:notice, :warning, kind: "Parece que no estas registrado, intenta registrandote primero.")
     end
   end
 

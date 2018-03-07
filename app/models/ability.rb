@@ -31,7 +31,6 @@ class Ability
 
 
     if user.present?
-        can :read, :all
         can [:my_account, 
             :edit, 
             :update, 

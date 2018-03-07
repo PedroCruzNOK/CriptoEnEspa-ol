@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:my_account, :edit, :edit_password, :update, :update_password]
   before_action :authenticate_user!
 
+  def index
+  end
+
   def my_account
   end
 

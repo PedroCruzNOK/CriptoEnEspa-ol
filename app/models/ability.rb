@@ -40,7 +40,6 @@ class Ability
             User 
         if user.admin?
             can :manage, :all
-            can :dashboard, Home
         end
     else
         # Usuarios no registrados (visitas)

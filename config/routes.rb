@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'management/index'
+  scope '/management' do
+    resources :users
+    resources :courses
+  end
+
   get 'users/my_account'
   get 'users/edit'
   get 'users/edit_password'
@@ -22,13 +28,13 @@ Rails.application.routes.draw do
 
   resources :application_settings
   resources :alerts
-  resources :courses
   resources :abouts
   resources :assistances
   resources :articles
 
   get 'home/index', to: 'home#index'
   get 'home/my_home', to: 'home#my_home'
+  get 'home/dashboard', to: 'home#dashboard'
 
   root 'home#index'
 

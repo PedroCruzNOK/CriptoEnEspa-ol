@@ -71,6 +71,16 @@ h1, h2, h3, h4, h5, h6{
 
 }
 
+.bg{
+  &.white{
+    background: white;
+  }
+
+  &.darkness{
+    background: #444444;
+  }
+}
+
 .card{
   margin-bottom: 1em;
 
@@ -235,6 +245,20 @@ h1, h2, h3, h4, h5, h6{
 .margen-bordes{
   margin-top: 60px;
 }
+
+.padding{
+  
+  padding: 2.5em;
+
+  &.padding-small{
+    padding: 1em;
+  }
+
+  &.padding-large{
+    padding: 4em;
+  }
+}
+
 .color-marge{
   border-bottom: 3em;
   border:solid 4px  rgb(94, 27, 96);

@@ -18,6 +18,7 @@
 //= require bootstrap
 //= require tinymce-jquery
 //= require_tree .
+$(document).ready(function () {
 (function() {
   $(document).on('click', '.toggle-window', function(e) {
     e.preventDefault();
@@ -33,7 +34,7 @@
     }
   });
 })();
-
+}
 $(document).ready(function () {
   $('.dropdown-toggle').dropdown()
 })

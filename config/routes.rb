@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount ActionCable.server => "/cable"
+
   get 'management/index'
   scope '/management' do
     resources :users

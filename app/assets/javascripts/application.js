@@ -17,6 +17,7 @@
 //= require popper
 //= require bootstrap
 //= require tinymce-jquery
+//= require cable
 //= require_tree .
 
 $(document).ready(function () {

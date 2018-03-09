@@ -1,16 +1,8 @@
 Rails.application.routes.draw do
-  get 'chat/index'
 
   get 'users/my_account'
   get 'users/edit'
   get 'users/edit_password'
-
-  resources :conversations, only: [:create]do
-    member do
-      post :close
-      resources :messages, only: [:create]
-    end
-  end
 
   resources :privacy_policies do
     collection do
@@ -36,12 +28,15 @@ Rails.application.routes.draw do
   resources :abouts
   resources :assistances
   resources :articles
-  resources :chat
+  resources :rooms
 
   get 'home/index', to: 'home#index'
   get 'home/my_home', to: 'home#my_home'
+  get 'rooms/show', to: 'rooms#show'
 
   root 'home#index'
+  
+  mount ActionCable.server => '/cable'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

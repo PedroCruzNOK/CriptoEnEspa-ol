@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :lessons
   mount ActionCable.server => "/cable"
 
   get 'management/index'

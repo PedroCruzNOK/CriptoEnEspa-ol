@@ -1,24 +1,15 @@
 <%= render 'partials/header_admin' %>
 
 <div class="container-fluid bg white padding padding-large">
+  <div class="row">
+    <div class="col">
+      <h1><%= @course.name %> <span class="badge badge-primary"> <%= @course.level %> </span> </h1>  
+    </div>
+  </div>
   <p>
-    <strong>Name:</strong>
-    <%= @course.name %>
-  </p>
-
-  <p>
-    <strong>Level:</strong>
-    <%= @course.level %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
+    <strong>Resumen del curso:</strong>
     <%= @course.description %>
   </p>
-
-  <%= link_to 'Editar', edit_course_path(@course) %> |
-  <%= link_to 'Atras', courses_path %>
-
   <hr>
-  <h2 class="black-text">Lecciones</h2>
+  <h2 class="black-text">Lecciones del curso</h2>
 </div> 

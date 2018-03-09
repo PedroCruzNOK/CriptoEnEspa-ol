@@ -11,6 +11,7 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
+    @topics = @course.lessons.select(:topic).distinct.order(topic: :asc)
   end
 
   # GET /courses/new

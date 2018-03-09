@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
-  resources :lessons
   mount ActionCable.server => "/cable"
 
   get 'management/index'
   scope '/management' do
     resources :users
-    resources :courses
+    resources :courses do 
+      resources :lessons
+    end
   end
+
+  resources :courses
 
   get 'chat/index'
 

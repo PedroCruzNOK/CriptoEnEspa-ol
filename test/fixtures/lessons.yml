@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  topic,: MyString
-  video_data: 
+  topic: MyString
+  video_data: MyText
   content: MyText
   course: one
 
 two:
-  topic,: MyString
-  video_data: 
+  topic: MyString
+  video_data: MyText
   content: MyText
   course: two

@@ -1,5 +1,20 @@
-<h1>New Lesson</h1>
+<%= render 'partials/header_admin' %>
 
-<%= render 'form', lesson: @lesson %>
+<div class="container-fluid bg white padding padding-large">
+  <div class="row">
+    <div class="col">
 
-<%= link_to 'Back', lessons_path %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      
+      <h1>Nueva Lección</h1>
+
+      <%= render 'form', lesson: @lesson %>
+
+      <%= link_to 'Back', @course %>
+    </div>
+  </div>
+</div>

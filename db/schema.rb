@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180309210744) do
 
+
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -99,6 +100,12 @@ ActiveRecord::Schema.define(version: 20180309210744) do
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  create_table "notes", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "privacy_policies", force: :cascade do |t|

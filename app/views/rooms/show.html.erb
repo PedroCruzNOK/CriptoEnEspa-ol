@@ -1,0 +1,5 @@
+<h1>ActionCable chat</h1>
+<%=link_to('Logout',destroy_user_session_path, :method => :delete)%>
+<div id="notes">
+  <%= render @note %>
+</div>

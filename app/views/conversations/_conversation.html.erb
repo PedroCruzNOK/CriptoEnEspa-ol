@@ -1,8 +1,8 @@
 <li>
   <div class="card border-info mb-3 " data-conversation-id="<%= conversation.id %>">
-    <div class="card-header">
+    <div class="card-header d-flex align-items-center justify-content-between">
       <%= link_to conversation.opposed_user(user).email, '', class: 'toggle-window' %>
-      <%= link_to "x", close_conversation_path(conversation), class: "btn btn-secondary btn-sm float-right", remote: true, method: :post %>
+      <%= link_to "x", close_conversation_path(conversation), class: "btn btn-secondary btn-sm float-right close-btn", remote: true, method: :post %>
     </div>
 
     <div class="card-body text-info" style="display: none;">
@@ -12,11 +12,15 @@
         </ul>
       </div>
 
-      <%= form_for [conversation, conversation.messages.new], remote: true do |f| %>
-        <%= f.hidden_field :user_id, value: user.id %>
-        <%= f.text_area :body, class: "form-control" %>
-        <%= f.submit "Send", class: "btn btn-success" %>
-      <% end %>
+      <form class="new_message">
+        <input name="conversation_id" type="hidden" value="<%= conversation.id %>">
+        <input name="user_id" type="hidden" value="<%= user.id %>">
+        <div class="input-group">
+          
+          <textarea name="body" class="form-control"></textarea>
+          <input type="submit" class="btn btn-success" value="Enviar">
+        </div>
+      </form>
 
     </div>
   </div>

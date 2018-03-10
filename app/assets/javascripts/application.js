@@ -39,7 +39,6 @@ $(document).ready(function () {
 (function() {
   $(document).on('click', '.toggle-window', function(e) {
     e.preventDefault();
-    console.log('No macayuuuuu')
     var panel = $(this).parent().parent();
     var messages_list = panel.find('.messages-list');
  

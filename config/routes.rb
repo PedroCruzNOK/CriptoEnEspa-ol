@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount ActionCable.server => "/cable"
 
   get 'management/index'
+  get 'management/chat'
   scope '/management' do
     resources :users
     resources :courses do 
@@ -10,8 +11,6 @@ Rails.application.routes.draw do
   end
 
   resources :courses
-
-  get 'chat/index'
 
   get 'users/my_account'
   get 'users/edit'
@@ -24,8 +23,14 @@ Rails.application.routes.draw do
   end
   resources :blog_articles
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', confirmations: 'confirmations' } do
-
       delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  end
+
+  resources :conversations, only: [:create] do
+    member do
+      post :close
+    end
+    resources :messages, only: [:create]
   end
 
   resource :user, only: [:edit_password, :edit] do

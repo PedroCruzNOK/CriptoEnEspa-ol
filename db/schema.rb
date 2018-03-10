@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180309210744) do
-
+ActiveRecord::Schema.define(version: 20180310022746) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -59,6 +58,7 @@ ActiveRecord::Schema.define(version: 20180309210744) do
     t.integer "sender_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["recipient_id", "sender_id"], name: "index_conversations_on_recipient_id_and_sender_id", unique: true
     t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
     t.index ["sender_id"], name: "index_conversations_on_sender_id"
   end
@@ -100,6 +100,8 @@ ActiveRecord::Schema.define(version: 20180309210744) do
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
   create_table "notes", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false

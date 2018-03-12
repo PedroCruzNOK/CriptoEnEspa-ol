@@ -1,3 +1,19 @@
 // Place all the styles related to the courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.course-topic-container{
+  border-radius: .25em;
+  box-shadow: 1px 1px 4px #313131;
+  overflow: hidden;
+
+  .head{
+    background-color: #EEEEEE;
+    padding: .2em 1em;
+  }
+
+  .item{
+    padding: 0 2em;
+  }
+}

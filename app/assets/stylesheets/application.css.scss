@@ -74,6 +74,20 @@ ul {
 
 }
 
+.bg{
+  &.white{
+    background: white;
+
+    p{
+      color: #303030;
+    }
+  }
+
+  &.darkness{
+    background: #444444;
+  }
+}
+
 .card{
   margin-bottom: 1em;
 
@@ -187,7 +201,6 @@ ul {
 
   p{
     margin-top: 4em;
-    font-size: 16px;
   }
 
   .item-container{
@@ -238,6 +251,20 @@ ul {
 .margen-bordes{
   margin-top: 60px;
 }
+
+.padding{
+  
+  padding: 2.5em;
+
+  &.padding-small{
+    padding: 1em;
+  }
+
+  &.padding-large{
+    padding: 4em;
+  }
+}
+
 .color-marge{
   border-bottom: 3em;
   border:solid 4px  rgb(94, 27, 96);
@@ -286,7 +313,6 @@ ul {
 }
 
 h2{
-  font-size: 15px;
   font-weight: bold;
   color: white;
 }
@@ -377,8 +403,9 @@ p{
   background-color: #D9EDF7;
   border-color: #BCE8F1;
   margin: 5px 20px;
-  padding: 10px;
+  padding: .3em .8em;
   float: right;
+  border-radius: .6em;
 }
 
 
@@ -386,6 +413,36 @@ p{
   background-color: #F1F0F0;
   border-color: #EEEEEE;
   margin: 5px 20px;
-  padding: 10px;
+  padding: .3em .8em;
   float: left;
+  border-radius: .6em;
+}
+
+#conversations-list{
+
+  .card{
+    .card-header{
+      padding-top: .4em;
+      padding-bottom: .4em;
+    }
+  }
+  .close-btn{
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .status-new{
+    background-color: #D8711B;
+
+    a{
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+#chatUsersList{
+  li a{
+    color: white !important;
+  }
 }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180309202128) do
+ActiveRecord::Schema.define(version: 20180310022746) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20180309202128) do
     t.integer "sender_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["recipient_id", "sender_id"], name: "index_conversations_on_recipient_id_and_sender_id", unique: true
     t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
     t.index ["sender_id"], name: "index_conversations_on_sender_id"
   end
@@ -67,6 +68,18 @@ ActiveRecord::Schema.define(version: 20180309202128) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.string "topic"
+    t.text "video_data"
+    t.text "content"
+    t.integer "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.index ["course_id"], name: "index_lessons_on_course_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -77,6 +90,16 @@ ActiveRecord::Schema.define(version: 20180309202128) do
     t.datetime "updated_at", null: false
     t.index ["conversation_id"], name: "index_messages_on_conversation_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "url"
+    t.string "source"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "notes", force: :cascade do |t|
@@ -114,6 +137,7 @@ ActiveRecord::Schema.define(version: 20180309202128) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.boolean "admin", default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

@@ -1,0 +1,43 @@
+<%# form_with(model: lesson, local: true) do |form| %>
+<%= form_with(model: lesson, url: course_lessons_path(@course), local: true) do |form| %>
+  <% if lesson.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+
+      <ul>
+      <% lesson.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :topic, 'Tema' %>
+    <%= form.text_field :topic, id: :lesson_topic, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :title, 'Titulo' %>
+    <%= form.text_field :title, id: :lesson_title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :video_data, 'Video' %>
+    <%= form.text_area :video_data, id: :lesson_video_data, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :content, 'Contenido' %>
+    <%= form.text_area :content, id: :lesson_content, class: 'form-control' %>
+  </div>
+
+  <!-- <div class="form-group"> -->
+    <%# form.label :course_id %>
+    <%# form.text_field :course_id, id: :lesson_course_id, class: 'form-control' %>
+  <!-- </div> -->
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

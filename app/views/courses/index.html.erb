@@ -1,31 +1,34 @@
-<p id="notice"><%= notice %></p>
+<%= render 'partials/header_admin' %>
 
-<h1>Courses</h1>
+<div class="container-fluid bg white padding padding-large">
 
-<table>
-  <thead>
-    <tr>
-      <th>Level</th>
-      <th>Level</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1>Cursos</h1>
 
-  <tbody>
-    <% @courses.each do |course| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= course.level %></td>
-        <td><%= course.level %></td>
-        <td><%= course.description %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Level</th>
+        <th>Description</th>
+        <th colspan="2"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @courses.each do |course| %>
+        <tr>
+          <td><%= link_to course.name, course %></td>
+          <td><%= course.level %></td>
+          <td><%= course.description %></td>
+          <td><%= link_to 'Edit', edit_course_path(course) %></td>
+          <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Course', new_course_path %>
+  <br>
+
+  <%= link_to 'New Course', new_course_path %>
+</div>
+

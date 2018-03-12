@@ -92,16 +92,6 @@ ActiveRecord::Schema.define(version: 20180310022746) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  create_table "news", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.string "url"
-    t.string "source"
-    t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "notes", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
